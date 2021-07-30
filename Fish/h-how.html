@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Win </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var menuText = new sjs.Text("HACKER!! YOU CAN'T WIN UNLESS YOU HACK, YOU HACKER!!",21,"black");
+var startBtn = new sjs.Button("AGIAN, AGAIN!!", function(){
+window.location = "look at the little fishies.html";
+});
+startBtn.center();
+}
+</script>
+</head>
+<body onload="start()">
+<h1> You Win </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

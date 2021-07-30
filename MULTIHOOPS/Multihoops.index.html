@@ -1,0 +1,28 @@
+<html>
+<head>
+<title> Multihoops </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",800,500);
+background = new sjs.Image("micheal.jpg");
+background.setSize(sjs.getWidth(),sjs.getHeight());
+ var text3 = new sjs.Text("Hello, Micheal! I'm sorry, but that special school we were going to send you to... well... honey, we can't send you there. I'm sorry for the disappointment. But the coach said that your athletic abilty is really great! And since you're tall, we deiced to sign you up for basketball! Made by Journey Bass, Roblox: Jman11680 display is IHave16Toes, Xbox is IHave16Toes",15,"white");
+ var game_text = new sjs.Text("Click N to yeet the ball. Time it to where it hits the hoop! Or else get yeeted yourself. Space toggles music.",20,"black");
+game_text.centerH().offset(0, 450)
+        
+ var button = new sjs.Button("PLAY BALL!", function(){
+ 	window.location = "Multihoops.html";
+ });
+
+ button.center();
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> You meant WHAT? </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

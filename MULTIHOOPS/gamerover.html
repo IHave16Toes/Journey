@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> Multihoops </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",800,500);
+ var text3 = new sjs.Text("LOSER!",200,"Red");
+text3.center();
+var text = new sjs.Text("You suck, honey. You suck, son. Qouted from Mr. and Mrs. Jordan.")
+text.centerH();        
+ var button = new sjs.Button("Try again", function(){
+ 	window.location = "Multihoops.html";
+ });
+
+ button.center();
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> You meant WHAT? </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

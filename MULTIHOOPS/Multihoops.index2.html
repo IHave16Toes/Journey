@@ -1,0 +1,28 @@
+<html>
+<head>
+<title> Multihoops </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",800,500);
+background = new sjs.Image("letter.jpg");
+background.setSize(sjs.getWidth(),sjs.getHeight());
+ var text3 = new sjs.Text("Son, listen, I know that your mother signed you up for basketball because of your dsylexia. Me and your mother are sorry we didn't tell you any of this after the car accident.. or the car accident... but listen, your coach is extremely impressed. So is your entire team, and even the state players. That is why you have this letter. IMPORTANT: YOUR CHILD HAS BEEN INVITED TO GO TO DA BIG BOI LEAGUES. So, we accepted. Are you a true player?",15,"white");
+ var text = new sjs.Text("IF YOU LOSE, YOU LOSE!!",34,"Red");
+ text.center().offset(0, 150)
+        
+ var button = new sjs.Button("Bu- h-how... why..? Um, yes, dad", function(){
+ 	window.location = "Multihoops13.html";
+ });
+
+ button.center();
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> You meant WHAT? (again) </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

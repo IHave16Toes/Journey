@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Game Over </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var gameover = new sjs.Text("OOF", 30, "black");
+gameover.centerH().offset(0, 30);
+var startBtn = new sjs.Button("Try again but there's no point since you'll just lose again", function(){
+window.location = "look at the little fishies.html";
+});
+startBtn.center();
+
+var scoreText = new sjs.Text("Your Final Score that you'll Never Imporve Upon:", 21, "Black");
+scoreText.setText("Your Final Score that you'll Never Imporve Upon: " +localStorage.getItem("score"))
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Game Over </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

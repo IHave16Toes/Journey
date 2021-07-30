@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> Multihoops </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",800,500);
+background = new sjs.Image("office.jpg");
+background.setSize(sjs.getWidth(),sjs.getHeight());
+ var text3 = new sjs.Text("The couch was very impressed by your basketball playing on the first day,' is what the principle implied to me with a bunch of fancy words. 'Tommorow, he'll teach you how to how to do a bounce launch. I'm sure you're excited!",15,"red");
+
+ var button = new sjs.Button("PLAY BALL! Using bounce launch with the C key", function(){
+ 	window.location = "Multihoops9.html";
+ });
+
+ button.center();
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Now the real game is going to get started! </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

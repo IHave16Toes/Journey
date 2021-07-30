@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var menu_text1 = new sjs.Text("Menu to awesomeness",28,"black");
+menu_text1.centerH();
+
+var menu_text2 = new sjs.Text("Play using arrow keys/ASWD, and use the space bar for music!");
+menu_text2.centerH().offset(0, 30);
+
+var startBtn = new sjs.Button("Start", function(){
+window.location = "look at the little fishies.html";
+});
+startBtn.center();
+
+var menu_text3 = new sjs.Text("Made by MEEEEEEEE (aka Journey CD Bass)Xbox1: Ihave16Toes", 18,"black");
+menu_text3.bottom().centerH();
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Fish </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> MULTIHOOPS </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+
+function start(){
+sjs.open("target",800,500);
+var score = 0;
+var scoreText = new sjs.Text("SCORE: 0",21,"green");
+var funk = true;
+
+//Background Music
+
+var playM = new Audio("../Fish/Music/only.mp3");
+var toggle = true;
+var musicOn = false;
+
+sjs.keyDown(SPACE_KEY, function(){
+	if(toggle == true){
+		if(musicOn == false){
+			playM.play();
+			musicOn = true;
+		} else {
+			playM.pause();
+			musicOn = false;
+		}
+			toggle = false;
+		setTimeout(function(){
+			toggle = true;
+		},1000);
+	}
+});
+
+//background
+
+var background = new sjs.Image("background.png");
+background.setSize(800, 500);
+var scoreText = new sjs.Text("Score: "+score, 10, "green");
+
+//hoop
+
+var hoop = new sjs.Image("hoop.png");
+hoop.setSize(60, 60);
+hoop.type = "hoop"
+hoop.y = 200
+hoop.x = 750
+
+//ball
+
+var basketball = new sjs.Image("basketball.png");
+basketball.setSize(50,50);
+basketball.type = "ball"
+basketball.y = 300
+
+//controls
+
+sjs.keyDown(N_KEY, function(){
+	if(funk == true){
+		basketball.pushUp(18);
+		basketball.pushRight(18);
+		basketball.setGravity(1);
+		basketball.bounce();
+		basketball.friction = 0.025;
+		funk = false;
+		setTimeout(function(){
+			funk = true;
+		}, 3000);
+	}
+});
+sjs.onHit("ball", "hoop", function(x,y){
+	window.location = "Multihoops1.html"
+	score = score + 1;
+	scoreText.setText("SCORE: "+score);
+	basketball.y = 300;
+	basketball.x = 50;
+	basketball.setGravity(1);
+	basketball.bounce();
+});
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> MULTIHOOPS </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
